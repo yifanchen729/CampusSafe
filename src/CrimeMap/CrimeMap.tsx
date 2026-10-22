@@ -10,7 +10,7 @@ import L from "leaflet";
 import "leaflet.markercluster";
 import MarkerClusterGroup from "react-leaflet-cluster";
 
-import crimes from "./data/crimeData.json"
+import crimes from "../data/crimeData.json"
 
 import "leaflet/dist/leaflet.css";
 import "./CrimeMap.css";

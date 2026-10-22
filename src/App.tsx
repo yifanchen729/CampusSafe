@@ -1,12 +1,12 @@
 import { useState } from "react";
-import CrimeMap from "./CrimeMap";
+import CrimeMap from "./CrimeMap/CrimeMap";
 import crimes from "./data/crimeData.json";
 import "./App.css";
 
-import NavBar from "./NavBar";
-import Hero from "./Hero";
-import Table from "./Table";
-import About from "./About";
+import NavBar from "./NavBar/NavBar";
+import Hero from "./Hero/Hero";
+import Table from "./Table/Table";
+import About from "./About/About";
 
 export default function App() {
 
