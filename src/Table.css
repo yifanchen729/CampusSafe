@@ -1,0 +1,196 @@
+.filterSection {
+  margin: auto;
+  padding: 0 22px;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.filterOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  height: 50px;
+  padding: 5px 13px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.filter-pin {
+  margin-bottom: 4px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+.filter-cluster {
+  font-weight: 900;
+}
+
+.legendSection {
+  padding: 20px 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.legendSection h3 {
+  margin: 0;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.legendHint {
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Container for the table filters */
+.tableFilters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+/* Text inputs for crime and location */
+.tableFilterInput {
+  border: 1px solid rgb(220, 226, 237);
+  background: white;
+  border-radius: 11px;
+
+  width: 250px;
+
+  padding: 10px 12px;
+
+  color: black;
+  font-size: 13px;
+  font-family: inherit;
+
+  outline: 0;
+}
+
+.tableFilterInput::placeholder
+{
+  color: rgba(115, 113, 113, 0.7);
+}
+
+/* Slight border change when clicking into input */
+.tableFilterInput:focus {
+  border-color: rgb(174, 184, 200);
+}
+
+/* Time dropdown */
+.tableFilterSelect {
+  border: 1px solid rgb(220, 226, 237);
+  border-radius: 8px;
+
+  background-color: rgba(211, 211, 211, 0.14);
+  color: gray;
+
+  padding: 10px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+
+  outline: 0;
+}
+
+/* Number of incidents currently displayed */
+.tableResultCount {
+  margin-bottom: 10px;
+
+  color: #6b7280;
+  font-size: 13px;
+
+  padding-left: 5px;
+}
+
+.tableCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  /* Make it scrollable */
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+th {
+  background: #f8fafc;
+
+  color: #64748b;
+  font-size: 12px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+th,
+td {
+  padding: 20px 18px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dateCol {
+  width: 20ch
+}
+
+.crimeCol {
+  width: 60ch;
+}
+
+.locationCol {
+  width: 40ch;
+}
+
+.occurredCol {
+  width: 25ch;
+}
+
+.dispositionCol {
+  width: 20ch;
+}
+
+td {
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+.no-result {
+  text-align: center;
+  padding: 20px;
+  color: rgb(138, 149, 168);
+}

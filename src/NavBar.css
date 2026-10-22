@@ -1,0 +1,42 @@
+/* Navigation */
+
+.navbar {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  background-color: white;
+}
+
+/* The main bar at the top */
+.navContent {
+  max-width: 1200px;
+  height: 72px;
+  margin: auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 22px;
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  color: rgb(129, 129, 129);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+
+nav a:hover {
+  color: black;
+}

@@ -1,0 +1,33 @@
+/* About */
+
+.aboutSection {
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 55px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+
+  background: #25438a;
+  color: white;
+
+  border-radius: 16px;
+}
+
+.aboutSection .label {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.aboutSection h2 {
+  margin: 8px 0;
+  font-size: 34px;
+  letter-spacing: -1px;
+}
+
+.aboutSection p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}

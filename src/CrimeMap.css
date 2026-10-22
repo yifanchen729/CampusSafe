@@ -1,0 +1,181 @@
+/* Removes Leaflet's default marker container styling */
+.custom-marker {
+  background: transparent;
+  border: none;
+}
+
+
+/* Basic pin shape */
+.marker-pin {
+  width: 20px;
+  height: 20px;
+
+  border: 3px solid white;
+  background: #64748b;
+
+  /*
+    Round three corners and leave one corner pointed.
+    Rotating this creates the map-pin shape.
+  */
+  border-radius: 50% 50% 50% 0;
+
+  transform: rotate(-45deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+
+  cursor: pointer;
+
+  transition: transform 0.15s ease;
+}
+
+/* Slightly enlarge marker when hovered */
+.marker-pin:hover {
+  transform: rotate(-45deg) scale(1.15);
+}
+
+/* White circle inside the marker */
+.marker-center {
+  width: 5px;
+  height: 5px;
+
+  background: white;
+
+  border-radius: 50%;
+}
+
+
+/* Sexual Crime - Orange */
+.marker-color-sexualCrime {
+  background: #f59e0b;
+}
+
+/* Violence - Red */
+.marker-color-violence {
+  background: #dc2626;
+}
+
+/* Theft - Blue */
+.marker-color-theft {
+  background: #2563eb;
+}
+
+/* Property Crime - Purple */
+.marker-color-property {
+  background: #9333ea;
+}
+
+/* Alcohol / Drugs - lightcoral */
+.marker-color-alcoholDrugs {
+  background: lightcoral;
+}
+
+/* Public Order - Cyan */
+.marker-color-publicOrder {
+  background: #0891b2;
+}
+
+/* Other - Gray */
+.marker-color-other {
+  background: #6b7280;
+}
+
+.custom-cluster {
+  background: transparent;
+  border: none;
+}
+
+.cluster-icon {
+  width: 30px;
+  height: 30px;
+
+  background-color: white;
+  color: #64748b;
+
+  border-radius: 50%;
+  border: 4px solid #64748b;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 800;
+}
+
+/* Sexual Crime - Orange */
+.cluster-color-sexualCrime {
+  color: #f59e0b;
+  border-color: #f59e0b;
+}
+
+/* Violence - Red */
+.cluster-color-violence {
+  color: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Theft - Blue */
+.cluster-color-theft {
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+/* Property Crime - Purple */
+.cluster-color-property {
+  color: #9333ea;
+  border-color: #9333ea;
+}
+
+/* Alcohol / Drugs - lightcoral */
+.cluster-color-alcoholDrugs {
+  color: lightcoral;
+  border-color: lightcoral;
+}
+
+/* Public Order - Cyan */
+.cluster-color-publicOrder {
+  color: #0891b2;
+  border-color: #0891b2;
+}
+
+/* Other - Gray */
+.cluster-color-other {
+  color: #6b7280;
+  border-color: #6b7280;
+}
+
+.popupContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+  white-space: nowrap;
+}
+
+.popupVerticalContainer
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.popupContainer .header
+{
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.popupContainer .detail
+{
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+.leaflet-popup-content {
+  margin: 10px;
+}

@@ -1,0 +1,77 @@
+/* Make it easier to format */
+* {
+  box-sizing: border-box;
+}
+
+/* Make jumping to some area smooth */
+html,
+body {
+    scroll-behavior: smooth !important;
+}
+
+body {
+  margin: 0;
+  background: white;
+  color: black;
+  min-height: 100
+}
+
+/* General sections */
+
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 24px;
+}
+
+.section .label {
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.section h2 {
+  margin: 8px 0;
+  font-size: 34px;
+  letter-spacing: -1px;
+}
+
+.section p,
+.sectionHeading p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* Map */
+
+#map {
+  scroll-margin-top: 50px;
+}
+
+.mapCard {
+  margin-top: 30px;
+  overflow: hidden;
+
+  border: 1px solid #dbe1e8;
+  border-radius: 14px;
+
+  background: white;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* Footer */
+
+footer {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 24px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #64748b;
+  font-size: 13px;
+
+  border-top: 1px solid #e2e8f0;
+}
