@@ -1,21 +1,22 @@
 # CampusSafe
 
-CampusSafe is an interactive web application for exploring reported crime incidents around UC Santa Barbara and Isla Vista. It transforms publicly available incident data into an interactive map, searchable table, and time-based visualization to make local safety information easier to explore.
+CampusSafe is an interactive web application for exploring reported crime incidents around UC Santa Barbara and Isla Vista. It transforms publicly available incident data into an interactive map, searchable table, and time-based visualization, making local safety information easier to explore and understand.
 
 ## Live Demo
 
 **Deployed at:** [CampusSafe](https://yifanchencs.com/)
 
+
 ## Features
 
 - **Interactive Crime Map** — Visualizes reported incidents using Leaflet with categorized map markers.
-- **Marker Clustering** — Groups nearby incidents to keep the map readable and allows users to expand clustered locations.
+- **Marker Clustering** — Groups nearby incidents to keep the map readable and allows users to expand clusters to view individual incidents.
 - **Crime Filtering** — Filter incidents by categories including violence, theft, property crime, alcohol/drugs, public order, and other incidents.
 - **Incident Search** — Search reported incidents by crime type or location.
 - **Date Filtering** — Explore incidents from the last day, 7 days, 14 days, 28 days, or all available records.
 - **Incident Timeline** — Displays crime activity across 2-hour time intervals using a stacked Recharts visualization.
-- **Automated Data Processing** — Backend periodically retrieves and processes the latest incident data.
-- **Persistent Geocoding Cache** — Stores previously geocoded locations to avoid unnecessary external API requests.
+- **Automated Data Updates** — Backend periodically retrieves, processes, and stores the latest publicly available incident data.
+- **Persistent Geocoding Cache** — Stores previously geocoded locations in MongoDB to reduce unnecessary external API requests.
 
 ## Tech Stack
 
@@ -32,9 +33,19 @@ CampusSafe is an interactive web application for exploring reported crime incide
 
 - Node.js
 - Express
+- MongoDB
 - Axios
 - csv-parse
 - Geoapify Geocoding API
+
+### Database
+
+- MongoDB Atlas
+
+### Deployment
+
+- Github Pages — Frontend hosting
+- Northflank — Backend hosting
 
 ## Architecture
 
@@ -50,10 +61,13 @@ Node.js / Express Backend
         |
         +--> Geocode locations
         |       |
-        |       +--> Persistent location cache
+        |       +--> MongoDB location cache
         |
         v
-Processed Crime Data
+MongoDB
+   |          |
+   v          v
+Crime Data   Update Time
         |
         v
 REST API
@@ -65,12 +79,15 @@ React Frontend
   Map    Table    Chart
 ```
 
-The backend periodically checks for updated incident data and stores the last successful update time. Previously geocoded locations are stored in a persistent cache so repeated locations do not require additional geocoding API requests.
+The backend periodically checks for updated incident data, processes new records, and stores the latest crime data in MongoDB. It also records the timestamp of the most recent successful update.
+
+Previously geocoded locations are stored in a persistent MongoDB cache. When a location appears again, its saved coordinates are reused instead of making another request to the Geoapify API.
 
 ## Project Impact
 
 - Visualizes **350+ reported UCSB and Isla Vista incidents** through an interactive map, searchable table, and activity chart.
 - Persistent location caching reduces potential geocoding API requests by approximately **66% across 400+ incident records**.
+- Automates the retrieval, normalization, categorization, geocoding, and storage of publicly available incident data.
 
 ## Running Locally
 
@@ -92,6 +109,7 @@ Create a `.env` file inside the backend directory:
 
 ```env
 GEOAPIFY_API_KEY=your_api_key_here
+MONGO_URI=your_mongodb_connection_string
 ```
 
 Start the backend:
@@ -152,7 +170,7 @@ Example:
 ### Get Last Update Time
 
 ```http
-GET /api/timeUpdated
+GET /api/updateTime
 ```
 
 Returns the timestamp of the most recent successful data update.
@@ -169,7 +187,7 @@ CampusSafe uses publicly available incident information and is an independent st
 
 Some incidents may not contain precise location information. Incidents with unavailable coordinates are not displayed on the map, and sensitive incident categories with intentionally generalized location information are excluded from location-based visualization.
 
-CampusSafe should not be treated as an emergency alert system or a replacement for official public safety resources.
+CampusSafe should not be treated as an emergency alert system or as a replacement for official public safety resources.
 
 ## Disclaimer
 
