@@ -1,10 +1,8 @@
+import { smoothScrollTo } from "../utils/smoothScrollTo";
+
 import "./NavBar.css";
 
-type NavBarProps = {
-  smoothScrollTo: (id: string) => void;
-};
-
-export default function NavBar({ smoothScrollTo }: NavBarProps) {
+export default function NavBar() {
   return (
     <div className="navbar">
       <div className="navContent">

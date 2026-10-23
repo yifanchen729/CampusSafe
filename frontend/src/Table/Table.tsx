@@ -1,37 +1,17 @@
 import { useState } from "react";
+
+import { categories } from "../types/crime";
+import type { Crime, Category, Filters } from "../types/crime";
 import "./Table.css"
-
-type Crime = {
-  id: string;
-  dateReported: string;
-  crimeType: string;
-  location: string;
-  occurredStart: string;
-  disposition: string;
-  category: string;
-};
-
-type Category =
-  "sexualCrime"
-  | "violence"
-  | "theft"
-  | "property"
-  | "alcoholDrugs"
-  | "publicOrder"
-  | "other";
-
-type Filters = Record<Category, boolean>;
 
 type TableProps = {
   crimes: Crime[];
-  categories: readonly Category[];
   filters: Filters;
   setFilters: React.Dispatch<React.SetStateAction<Filters>>;
 };
 
 export default function Table({
   crimes,
-  categories,
   filters,
   setFilters
 }: TableProps) {

@@ -48,9 +48,9 @@
 }
 
 
-/* Sexual Crime - Orange */
+/* Sexual Crime - Pink */
 .marker-color-sexualCrime {
-  background: #f59e0b;
+  background: #db2777;
 }
 
 /* Violence - Red */
@@ -65,12 +65,12 @@
 
 /* Property Crime - Purple */
 .marker-color-property {
-  background: #9333ea;
+  background: #7c3aed;
 }
 
-/* Alcohol / Drugs - lightcoral */
+/* Alcohol / Drugs - Amber */
 .marker-color-alcoholDrugs {
-  background: lightcoral;
+  background: #d97706;
 }
 
 /* Public Order - Cyan */
@@ -80,7 +80,7 @@
 
 /* Other - Gray */
 .marker-color-other {
-  background: #6b7280;
+  background: #64748b;
 }
 
 .custom-cluster {
@@ -105,10 +105,10 @@
   font-weight: 800;
 }
 
-/* Sexual Crime - Orange */
+/* Sexual Crime - Pink */
 .cluster-color-sexualCrime {
-  color: #f59e0b;
-  border-color: #f59e0b;
+  color: #db2777;
+  border-color: #db2777;
 }
 
 /* Violence - Red */
@@ -125,14 +125,14 @@
 
 /* Property Crime - Purple */
 .cluster-color-property {
-  color: #9333ea;
-  border-color: #9333ea;
+  color: #7c3aed;
+  border-color: #7c3aed;
 }
 
-/* Alcohol / Drugs - lightcoral */
+/* Alcohol / Drugs - Amber */
 .cluster-color-alcoholDrugs {
-  color: lightcoral;
-  border-color: lightcoral;
+  color: #d97706;
+  border-color: #d97706;
 }
 
 /* Public Order - Cyan */
@@ -143,8 +143,8 @@
 
 /* Other - Gray */
 .cluster-color-other {
-  color: #6b7280;
-  border-color: #6b7280;
+  color: #64748b;
+  border-color: #64748b;
 }
 
 .popupContainer {

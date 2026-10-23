@@ -1,3 +1,4 @@
+import { smoothScrollTo } from "../utils/smoothScrollTo";
 import "./Hero.css"
 
 export default function Hero() {
@@ -16,7 +17,12 @@ export default function Hero() {
         Isla Vista through an interactive crime map.
       </p>
 
-      <a className="primaryButton" href="#map">
+      <a className="primaryButton"
+        href="#map"
+        onClick={(e) => {
+          e.preventDefault();
+          smoothScrollTo("map");
+        }}>
         Explore the map
       </a>
     </div>

@@ -6,49 +6,15 @@ import {
 } from "react-leaflet";
 
 import L from "leaflet";
-
 import "leaflet.markercluster";
 import MarkerClusterGroup from "react-leaflet-cluster";
+import "leaflet/dist/leaflet.css"
 
 import crimes from "../data/crimeData.json"
-
-import "leaflet/dist/leaflet.css";
+import { categories } from "../types/crime";
+import type { Filters } from "../types/crime";
+;
 import "./CrimeMap.css";
-
-// Creates a different marker depending on the crime type
-function getCrimeIcon(category: string) {
-  // Name the container
-  const markerClass = `marker-color-${category}`;
-
-  // Return the element which specific class
-  return L.divIcon({
-    className: "custom-marker",
-
-    html: `
-      <div class="marker-pin ${markerClass}">
-        <div class="marker-center"></div>
-      </div>
-    `,
-
-    // Size but since we use div, it does not influence
-    iconSize: [20, 20],
-    // Bottom of the pin represents the actual coordinate
-    iconAnchor: [10, 20],
-    // Position popup above the marker
-    popupAnchor: [2, -20]
-  });
-}
-
-type Category =
-  | "sexualCrime"
-  | "violence"
-  | "theft"
-  | "property"
-  | "alcoholDrugs"
-  | "publicOrder"
-  | "other";
-
-type Filters = Record<Category, boolean>;
 
 type CrimeMapProp = {
   filters: Filters;
@@ -56,15 +22,29 @@ type CrimeMapProp = {
 
 function CrimeMap({ filters }: CrimeMapProp) {
 
-  const categories = [
-    "sexualCrime",
-    "violence",
-    "theft",
-    "property",
-    "alcoholDrugs",
-    "publicOrder",
-    "other"
-  ] as const;
+  // Creates a different marker depending on the crime type
+  function getCrimeIcon(category: string) {
+    // Name the container
+    const markerClass = `marker-color-${category}`;
+
+    // Return the element which specific class
+    return L.divIcon({
+      className: "custom-marker",
+
+      html: `
+      <div class="marker-pin ${markerClass}">
+        <div class="marker-center"></div>
+      </div>
+    `,
+
+      // Size but since we use div, it does not influence
+      iconSize: [20, 20],
+      // Bottom of the pin represents the actual coordinate
+      iconAnchor: [10, 20],
+      // Position popup above the marker
+      popupAnchor: [2, -20]
+    });
+  }
 
   return (
     // Sets the size of the map
