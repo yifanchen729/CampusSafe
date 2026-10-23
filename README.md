@@ -49,34 +49,39 @@ CampusSafe is an interactive web application for exploring reported crime incide
 
 ## Architecture
 
+## Architecture
+
 ```text
-Public Incident Data
-        |
-        v
-Node.js / Express Backend
-        |
-        +--> Parse & normalize records
-        |
-        +--> Categorize incidents
-        |
-        +--> Geocode locations
-        |       |
-        |       +--> MongoDB location cache
-        |
-        v
-MongoDB
-   |          |
-   v          v
-Crime Data   Update Time
-        |
-        v
-REST API
-        |
-        v
-React Frontend
-   |       |       |
-   v       v       v
-  Map    Table    Chart
+                    Public Incident Data
+                            │
+                            ▼
+                  Node.js / Express Backend
+                            │
+              ┌─────────────┼─────────────┐
+              │             │             │
+              ▼             ▼             ▼
+         Normalize      Categorize     Geocode
+          Records        Incidents     Locations
+                                          │
+                                          ▼
+                                  MongoDB Location Cache
+                                          │
+                                          ▼
+                                      MongoDB
+                              ┌───────────┴───────────┐
+                              │                       │
+                              ▼                       ▼
+                         Crime Data              Update Time
+                              │
+                              ▼
+                           REST API
+                              │
+                              ▼
+                       React Frontend
+                    ┌─────────┼─────────┐
+                    │         │         │
+                    ▼         ▼         ▼
+                   Map      Table     Chart
 ```
 
 The backend periodically checks for updated incident data, processes new records, and stores the latest crime data in MongoDB. It also records the timestamp of the most recent successful update.
