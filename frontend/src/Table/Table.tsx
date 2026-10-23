@@ -126,7 +126,7 @@ export default function Table({
   return (
     <>
       <section className="section filterSection">
-        <h3>Filters: </h3>
+        <h3>Map & Table Filters: </h3>
 
         {categories
           // Did not include sexualCrime as a filter options
@@ -222,8 +222,13 @@ export default function Table({
           </select>
         </div>
 
-        <div className="tableResultCount">
-          {filteredCrimes.length} incidents shown
+        <div className="tableDetailrow">
+          <div className="tableResultCount">
+            {filteredCrimes.length} incidents shown
+          </div>
+          <div className="tableUpdateDate">
+            Last update: 10/22/2026 9:01 PM
+          </div>
         </div>
 
         <div className="tableCard">

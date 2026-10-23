@@ -15,16 +15,21 @@ import type {
   NameType,
 } from "recharts/types/component/DefaultTooltipContent";
 
+import { categories } from "../types/crime";
 import type { Crime, Category, Filters } from "../types/crime";
 
 import "./Chart.css";
 
-
-type ChartProps = {
-  crimes: Crime[];
-  filters: Filters;
+const categoryNames: Record<string, string> = {
+  violence: "Violence",
+  theft: "Theft",
+  property: "Property",
+  alcoholDrugs: "Alcohol & Drugs",
+  publicOrder: "Public Order",
+  other: "Other",
 };
 
+// Put this outside of the Chart since we can't render component when rendering other
 function CustomTooltip({
   active,
   payload,
@@ -40,15 +45,24 @@ function CustomTooltip({
 
       {payload.map((item) => (
         <p key={String(item.dataKey)}>
-          {String(item.dataKey)}: {item.value}
+          {categoryNames[String(item.dataKey)]}: {item.value}
         </p>
       ))}
     </div>
   );
 }
 
+type ChartProps = {
+  crimes: Crime[];
+  filters: Filters;
+  setFilters: React.Dispatch<React.SetStateAction<Filters>>;
+};
 
-export default function Chart({ crimes, filters }: ChartProps) {
+export default function Chart({
+  crimes,
+  filters,
+  setFilters
+}: ChartProps) {
 
   // Full 24 hours divided into 2-hour intervals
   const hours = [
@@ -151,6 +165,33 @@ export default function Chart({ crimes, filters }: ChartProps) {
         throughout the day. (Some may not be displayed due to invalid time)
       </p>
 
+      <section className="section filterSection">
+        <h3>Chart Filters:</h3>
+
+        {categories
+          .filter((category) => category !== "sexualCrime")
+          .map((category) => (
+            <label className="filterOption" key={category}>
+              <input
+                type="checkbox"
+                checked={filters[category]}
+                onChange={() =>
+                  setFilters({
+                    ...filters,
+                    [category]: !filters[category]
+                  })
+                }
+              />
+
+              <div className={`marker-pin marker-color-${category} filter-pin`}>
+                <div className="marker-center"></div>
+              </div>
+
+              <span>{categoryNames[category]}</span>
+            </label>
+          ))}
+      </section>
+
       <div className="chartCard">
         {/* Chart header */}
         <div className="chartHeader">
@@ -198,8 +239,10 @@ export default function Chart({ crimes, filters }: ChartProps) {
                 axisLine={false}
               />
 
-              {/* Change the hover color */}
-              <Tooltip content={CustomTooltip} />
+              {/* Customize and change the hover color */}
+              <Tooltip content={CustomTooltip}
+                cursor={{ fill: "rgba(0, 0, 0, 0.05)" }}
+              />
 
               {/* Stacked crime categories, this repeats for every single x value*/}
               {filters.violence && (

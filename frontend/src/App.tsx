@@ -24,6 +24,18 @@ export default function App() {
     other: true
   });
 
+  // I attempt to have two filter sections that change the filter
+  // Appearantly only the first one works, so have two filters
+  const [chartFilters, setChartFilters] = useState<Filters>({
+    sexualCrime: true,
+    violence: true,
+    theft: true,
+    property: true,
+    alcoholDrugs: true,
+    publicOrder: true,
+    other: true
+  });
+
   return (
     <>
       <NavBar />
@@ -56,7 +68,10 @@ export default function App() {
           setFilters={setFilters}
         />
 
-        <Chart crimes={crimes} filters={filters} />
+        <Chart
+          crimes={crimes}
+          filters={chartFilters}
+          setFilters={setChartFilters} />
 
         <About />
       </main >
