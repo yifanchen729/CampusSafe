@@ -2,6 +2,10 @@
 
 CampusSafe is an interactive web application for exploring reported crime incidents around UC Santa Barbara and Isla Vista. It transforms publicly available incident data into an interactive map, searchable table, and time-based visualization to make local safety information easier to explore.
 
+## Live Demo
+
+**Deployed at:** [CampusSafe](yifanchencs.com)
+
 ## Features
 
 - **Interactive Crime Map** — Visualizes reported incidents using Leaflet with categorized map markers.
