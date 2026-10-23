@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { categories } from "../types/crime";
 import type { Crime, Category, Filters } from "../types/crime";
@@ -123,6 +123,26 @@ export default function Table({
 
   const filteredCrimes = applyFilters();
 
+  const [updatedAt, setUpdatedAt] = useState("");
+
+  useEffect(() => {
+    async function getUpdatedTime() {
+      try {
+        const response = await fetch(
+          "http://localhost:5000/api/updateTime"
+        );
+
+        const data = await response.json();
+
+        setUpdatedAt(data.updatedAt);
+      } catch (error) {
+        console.log("Failed to get update time:", error);
+      }
+    }
+
+    getUpdatedTime();
+  }, []);
+
   return (
     <>
       <section className="section filterSection">
@@ -227,7 +247,9 @@ export default function Table({
             {filteredCrimes.length} incidents shown
           </div>
           <div className="tableUpdateDate">
-            Last update: 10/22/2026 9:01 PM
+            Last update: {updatedAt
+              ? new Date(updatedAt).toLocaleString()
+              : "Loading..."}
           </div>
         </div>
 

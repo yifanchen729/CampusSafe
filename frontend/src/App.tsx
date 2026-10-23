@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CrimeMap from "./CrimeMap/CrimeMap";
-import crimes from "./data/crimeData.json";
 import "./App.css";
 
-import type { Filters } from "./types/crime";
+import type { Crime, Filters } from "./types/crime";
 
 import NavBar from "./NavBar/NavBar";
 import Hero from "./Hero/Hero";
@@ -12,6 +11,25 @@ import Chart from "./Chart/Chart";
 import About from "./About/About";
 
 export default function App() {
+
+  const [crimes, setCrimes] = useState<Crime[]>([]);
+
+  useEffect(() => {
+    async function getCrimes() {
+      try {
+        const response = await fetch("http://localhost:5000/api/crimes");
+        console.log("successfully interacted with API")
+
+        const data = await response.json();
+
+        setCrimes(data.crimes);
+      } catch (error) {
+        console.log("Failed to get crime data:", error);
+      }
+    }
+
+    getCrimes();
+  }, []);
 
   // Stores which crime categories are enabled
   const [filters, setFilters] = useState<Filters>({
@@ -58,7 +76,10 @@ export default function App() {
           </div>
 
           <div className="mapCard">
-            <CrimeMap filters={filters} />
+            <CrimeMap 
+              crimes={crimes}
+              filters={filters}
+            />
           </div>
         </section>
 

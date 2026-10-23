@@ -66,8 +66,6 @@ export default function Chart({
 
   // Full 24 hours divided into 2-hour intervals
   const hours = [
-    "12 - 2 AM",
-    "2 - 4 AM",
     "4 - 6 AM",
     "6 - 8 AM",
     "8 - 10 AM",
@@ -77,7 +75,9 @@ export default function Chart({
     "4 - 6 PM",
     "6 - 8 PM",
     "8 - 10 PM",
-    "10 PM - 12 AM"
+    "10 PM - 12 AM",
+    "12 - 2 AM",
+    "2 - 4 AM"
   ];
 
   // Create one bucket for every 2-hour interval
@@ -114,11 +114,14 @@ export default function Chart({
     }
 
     // Find the correct 2-hour interval
-    //
-    // 0, 1   -> index 0
+    // I want to start at 4 - 6 am
+    // 4, 5   -> index 0
+    // 6, 7   -> index 1
     // ...
-    // 22, 23 -> index 11
-    const index = Math.floor(hour / 2);
+    // 22, 23 -> index 9
+    // 0, 1   -> index 10
+    // 2, 3   -> index 11
+    const index = (Math.floor(hour / 2) + 10) % 12;
 
     // Add crime to its category
     timelineData[index][category]++;

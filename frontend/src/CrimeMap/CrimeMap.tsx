@@ -10,17 +10,20 @@ import "leaflet.markercluster";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import "leaflet/dist/leaflet.css"
 
-import crimes from "../data/crimeData.json"
 import { categories } from "../types/crime";
-import type { Filters } from "../types/crime";
+import type { Crime, Filters } from "../types/crime";
 ;
 import "./CrimeMap.css";
 
-type CrimeMapProp = {
+type CrimeMapProps = {
+  crimes: Crime[];
   filters: Filters;
 };
 
-function CrimeMap({ filters }: CrimeMapProp) {
+export default function CrimeMap({
+  crimes,
+  filters
+}: CrimeMapProps) {
 
   // Creates a different marker depending on the crime type
   function getCrimeIcon(category: string) {
@@ -163,6 +166,3 @@ function CrimeMap({ filters }: CrimeMapProp) {
     </>
   );
 }
-
-
-export default CrimeMap;

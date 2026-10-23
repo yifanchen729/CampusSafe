@@ -14,8 +14,11 @@ export type Crime = {
   crimeType: string;
   location: string;
   occurredStart: string;
+  occurredEnd: string | null;
   disposition: string;
   category: string;
+  latitude: number | null;
+  longitude: number | null;
 };
 
 export type Category =
