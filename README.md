@@ -4,7 +4,7 @@ CampusSafe is an interactive web application for exploring reported crime incide
 
 ## Live Demo
 
-**Deployed at:** [CampusSafe](yifanchencs.com)
+**Deployed at:** [CampusSafe](https://yifanchencs.com/)
 
 ## Features
 
