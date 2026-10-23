@@ -1,546 +1,546 @@
-{
-  "6700 Block Del Playa Drive": {
-    "latitude": 34.409779,
-    "longitude": -119.862641
-  },
-  "700 Block Camino Del Sur": {
-    "latitude": 34.4151986,
-    "longitude": -119.8625613
-  },
-  "900 Block Embarcadero Del Mar": {
-    "latitude": 34.4128781,
-    "longitude": -119.8568241
-  },
-  "Parking Lot 61": {
-    "latitude": null,
-    "longitude": null
-  },
-  "University Center": {
-    "latitude": null,
-    "longitude": null
-  },
-  "South Hall": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Sands Beach": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Davidson Library": {
-    "latitude": 34.4139917,
-    "longitude": -119.8455225
-  },
-  "El Colegio Road/ Embarcadero Del Norte": {
-    "latitude": 34.4174135,
-    "longitude": -119.8553707
-  },
-  "Counseling and Career Services Building": {
-    "latitude": 34.41336,
-    "longitude": -119.849241
-  },
-  "San Nicholas Residence Hall": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Intercollegiate Athletics Building": {
-    "latitude": 34.415844,
-    "longitude": -119.850282
-  },
-  "Central Receiving Storehouse": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Parking Lot 05": {
-    "latitude": null,
-    "longitude": null
-  },
-  "6600 Block Del Playa Drive": {
-    "latitude": 34.409759,
-    "longitude": -119.858733
-  },
-  "Isla Vista": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Parking Lot 10": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Tropicana Del Norte": {
-    "latitude": 34.417038,
-    "longitude": -119.854823
-  },
-  "6500 Block Del Playa Drive": {
-    "latitude": 34.409274,
-    "longitude": -119.853746
-  },
-  "700 Block Embarcadero Del Mar": {
-    "latitude": 34.417283,
-    "longitude": -119.857046
-  },
-  "6641 Del Playa Drive": {
-    "latitude": 34.409543,
-    "longitude": -119.860239
-  },
-  "6693 Del Playa Drive": {
-    "latitude": 34.409553,
-    "longitude": -119.862312
-  },
-  "Campus Housing": {
-    "latitude": null,
-    "longitude": null
-  },
-  "6793 Estero Road": {
-    "latitude": 34.41333,
-    "longitude": -119.866018
-  },
-  "6730 Del Playa Drive": {
-    "latitude": 34.40986591304348,
-    "longitude": -119.86362339130434
-  },
-  "Madrid Road/ Embarcadero Del Mar": {
-    "latitude": 34.4124664,
-    "longitude": -119.8570485
-  },
-  "Boy's & Girl's Club (Devereux)": {
-    "latitude": null,
-    "longitude": null
-  },
-  "6672 Abrego Road": {
-    "latitude": 34.414338,
-    "longitude": -119.861636
-  },
-  "Coal Oil Point Reserve": {
-    "latitude": 34.41137,
-    "longitude": -119.876634
-  },
-  "West Campus Lane": {
-    "latitude": 34.416752,
-    "longitude": -119.86999
-  },
-  "6531 Del Playa Drive": {
-    "latitude": 34.408961,
-    "longitude": -119.855251
-  },
-  "Del Playa Drive/ Camino Del Sur": {
-    "latitude": 34.409779,
-    "longitude": -119.8625884
-  },
-  "Del Playa Drive/ El Embarcadero Road": {
-    "latitude": 34.4094089,
-    "longitude": -119.8562632
-  },
-  "Del Playa Drive/ Camino Pescadero Road": {
-    "latitude": 34.4142106,
-    "longitude": -119.858996
-  },
-  "Santa Ynez Apartments": {
-    "latitude": null,
-    "longitude": null
-  },
-  "6600 Block Abrego Road": {
-    "latitude": 34.414164,
-    "longitude": -119.858697
-  },
-  "El Embarcadero Road/ Del Playa Drive": {
-    "latitude": 34.4094089,
-    "longitude": -119.8562632
-  },
-  "6653 Del Playa Drive": {
-    "latitude": 34.409574,
-    "longitude": -119.861007
-  },
-  "Campus Property": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Campbell Hall": {
-    "latitude": 34.416288,
-    "longitude": -119.845534
-  },
-  "Harder Stadium": {
-    "latitude": 34.420667,
-    "longitude": -119.854614
-  },
-  "6565 Trigo Road": {
-    "latitude": 34.410924,
-    "longitude": -119.857742
-  },
-  "775 Camino Del Sur": {
-    "latitude": 34.415683,
-    "longitude": -119.863218
-  },
-  "Parking Lot 12": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Parking Lot 22": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Camino Pescadero Road/ Del Playa Drive": {
-    "latitude": 34.4142106,
-    "longitude": -119.858996
-  },
-  "Henry T. Yang Drive": {
-    "latitude": 34.423175,
-    "longitude": -119.862037
-  },
-  "Trailer near Ferguson Center (Devereux)": {
-    "latitude": null,
-    "longitude": null
-  },
-  "San Clemente Villages": {
-    "latitude": 34.417929,
-    "longitude": -119.858562
-  },
-  "Camino Del Sur/ Camino Pescadero Road": {
-    "latitude": 34.4151986,
-    "longitude": -119.8625613
-  },
-  "Outside of UCSB PD Jurisdiction": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Storke Road": {
-    "latitude": 34.4323392,
-    "longitude": -119.8699858
-  },
-  "Campus Point": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Camino Del Sur/ Del Playa Drive": {
-    "latitude": 34.409779,
-    "longitude": -119.8625884
-  },
-  "1000 Block Camino Pescadero Road": {
-    "latitude": 34.410621,
-    "longitude": -119.8587127
-  },
-  "6800 Block Del Playa Drive": {
-    "latitude": 34.410006,
-    "longitude": -119.866666
-  },
-  "6700 Block Trigo Road": {
-    "latitude": 34.411155,
-    "longitude": -119.862613
-  },
-  "900 Block Camino Lindo": {
-    "latitude": 34.4124076,
-    "longitude": -119.8679646
-  },
-  "San Nicolas Residence Hall": {
-    "latitude": 34.40959,
-    "longitude": -119.846008
-  },
-  "Chemistry Building": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Slough Road": {
-    "latitude": 34.417208,
-    "longitude": -119.869895
-  },
-  "6700 Block El Colegio Road": {
-    "latitude": 34.417339,
-    "longitude": -119.86472
-  },
-  "Harold Frank Hall": {
-    "latitude": 34.413842,
-    "longitude": -119.84196
-  },
-  "Los Carneros Road/ Discovery Drive": {
-    "latitude": 34.4253465,
-    "longitude": -119.8615418
-  },
-  "Manzanita Loop": {
-    "latitude": 34.4206919,
-    "longitude": -119.8580999
-  },
-  "6500 Block Seville Road": {
-    "latitude": 34.411795,
-    "longitude": -119.853673
-  },
-  "800 Block Camino Corto Road": {
-    "latitude": 34.4156868,
-    "longitude": -119.8665415
-  },
-  "6600 Block Sueno Road": {
-    "latitude": 34.412659,
-    "longitude": -119.858716
-  },
-  "1000 Block El Embarcadero Road": {
-    "latitude": 34.410221,
-    "longitude": -119.855959
-  },
-  "6500 Block Trigo Road": {
-    "latitude": 34.411138,
-    "longitude": -119.855553
-  },
-  "900 Block Embarcadero Del Norte": {
-    "latitude": 34.413128,
-    "longitude": -119.855396
-  },
-  "6827 Del Playa Drive": {
-    "latitude": 34.409524,
-    "longitude": -119.867415
-  },
-  "Ferguson Center": {
-    "latitude": 34.4108799,
-    "longitude": -119.8755575
-  },
-  "Tenaya South Tower": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Storke Plaza": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Santa Catalina": {
-    "latitude": 34.4183969,
-    "longitude": -119.8676659
-  },
-  "San Joaquin": {
-    "latitude": null,
-    "longitude": null
-  },
-  "El Colegio Road/ Camino Corto": {
-    "latitude": 34.4173369,
-    "longitude": -119.8665477
-  },
-  "Manzanita Villages": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Elings Hall": {
-    "latitude": 34.414929,
-    "longitude": -119.839665
-  },
-  "Biological Services II Building": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Music Building": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Buchanan Hall": {
-    "latitude": 34.4154761,
-    "longitude": -119.844593
-  },
-  "Multi Cultural Center": {
-    "latitude": null,
-    "longitude": null
-  },
-  "San Rafael Residence Hall": {
-    "latitude": 34.4109614,
-    "longitude": -119.8524488
-  },
-  "Santa Catalina Residence Hall": {
-    "latitude": 34.417828,
-    "longitude": -119.867999
-  },
-  "San Miguel Residence Hall": {
-    "latitude": 34.4103266,
-    "longitude": -119.8469615
-  },
-  "6600 Block Sabado Tarde Road": {
-    "latitude": 34.410435,
-    "longitude": -119.85872
-  },
-  "Webb Hall": {
-    "latitude": 34.413512,
-    "longitude": -119.843378
-  },
-  "North Campus Open Space": {
-    "latitude": 34.422401,
-    "longitude": -119.871409
-  },
-  "San Rafael Tower": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Associated Students Recycling Center": {
-    "latitude": 34.4143917,
-    "longitude": -119.8493493
-  },
-  "Bus Loop": {
-    "latitude": 34.4206919,
-    "longitude": -119.8580999
-  },
-  "900 Block Camino Corto Road": {
-    "latitude": 34.4126467,
-    "longitude": -119.8664232
-  },
-  "6650 Abrego Road": {
-    "latitude": 34.414684,
-    "longitude": -119.860692
-  },
-  "Parking Lot 57": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Interactive Learning Pavilion": {
-    "latitude": 34.4125194,
-    "longitude": -119.8453061
-  },
-  "Boys and Girls Club (Devereux)": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Embarcadero Del Norte/ Segovia Road": {
-    "latitude": 34.4144353,
-    "longitude": -119.8553797
-  },
-  "Brush North of Santa Ynez Apartments": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Camino Del Sur/ Abrego Road": {
-    "latitude": 34.4141751,
-    "longitude": -119.8625597
-  },
-  "Arbor": {
-    "latitude": null,
-    "longitude": null
-  },
-  "El Centro Building": {
-    "latitude": 34.414294,
-    "longitude": -119.8444325
-  },
-  "6775 Sueno Road": {
-    "latitude": 34.412436,
-    "longitude": -119.865358
-  },
-  "6613 Del Playa Drive": {
-    "latitude": 34.409334,
-    "longitude": -119.859319
-  },
-  "6574 Del Playa Drive": {
-    "latitude": 34.409875,
-    "longitude": -119.857889
-  },
-  "Embarcadero Del Mar/ Embarcadero Del Norte": {
-    "latitude": 34.4206919,
-    "longitude": -119.8580999
-  },
-  "6681 Del Playa Drive": {
-    "latitude": 34.409517,
-    "longitude": -119.861733
-  },
-  "Theater and Dance Building Restroom": {
-    "latitude": null,
-    "longitude": null
-  },
-  "De La Guerra Dining Commons": {
-    "latitude": 34.4178376,
-    "longitude": -119.8671871
-  },
-  "Embarcadero Hall": {
-    "latitude": 34.4121559,
-    "longitude": -119.8557764
-  },
-  "North of Parking Lot 38": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Arts Building": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Portola Dining Commons": {
-    "latitude": 34.4178376,
-    "longitude": -119.8671871
-  },
-  "6739 El Colegio Road": {
-    "latitude": 34.41677,
-    "longitude": -119.86425
-  },
-  "IV Theater": {
-    "latitude": 34.415,
-    "longitude": -119.848861
-  },
-  "San Joaquin Villages": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Westgate Apartments": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Student Organization": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Carrillo Dining Commons": {
-    "latitude": 34.4178376,
-    "longitude": -119.8671871
-  },
-  "6566 Del Playa Drive": {
-    "latitude": 34.409813,
-    "longitude": -119.857227
-  },
-  "Embarcadero Del Norte/ Trigo Road": {
-    "latitude": 34.4112044,
-    "longitude": -119.8555311
-  },
-  "6500 Block Sabado Tarde Road": {
-    "latitude": 34.410413,
-    "longitude": -119.853829
-  },
-  "6600 Block Trigo Road": {
-    "latitude": 34.411414,
-    "longitude": -119.858889
-  },
-  "Anisq'Oyo Park": {
-    "latitude": 34.412561,
-    "longitude": -119.856175
-  },
-  "Sabado Tarde Road/ Camino Majorca": {
-    "latitude": 34.4106209,
-    "longitude": -119.8695409
-  },
-  "West Campus Family Housing": {
-    "latitude": 34.418082,
-    "longitude": -119.872698
-  },
-  "Zaca House Manzanita": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Arrowhead Village San Clemente": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Santa Ynez": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Webb Hall Loading Dock": {
-    "latitude": 34.413512,
-    "longitude": -119.843378
-  },
-  "Anacapa Residence Hall": {
-    "latitude": 34.4110259,
-    "longitude": -119.8430499
-  },
-  "Santa Catalina South Tower": {
-    "latitude": 34.417814,
-    "longitude": -119.868291
-  },
-  "Parking Lot 65": {
-    "latitude": null,
-    "longitude": null
-  },
-  "Bren Hall": {
-    "latitude": 34.413203,
-    "longitude": -119.841855
-  },
-  "UCEN Road/ Life Sciences Building": {
-    "latitude": null,
-    "longitude": null
+  {
+    "6700 Block Del Playa Drive": {
+      "latitude": 34.409779,
+      "longitude": -119.862641
+    },
+    "700 Block Camino Del Sur": {
+      "latitude": 34.4151986,
+      "longitude": -119.8625613
+    },
+    "900 Block Embarcadero Del Mar": {
+      "latitude": 34.4128781,
+      "longitude": -119.8568241
+    },
+    "Parking Lot 61": {
+      "latitude": null,
+      "longitude": null
+    },
+    "University Center": {
+      "latitude": null,
+      "longitude": null
+    },
+    "South Hall": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Sands Beach": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Davidson Library": {
+      "latitude": 34.4139917,
+      "longitude": -119.8455225
+    },
+    "El Colegio Road/ Embarcadero Del Norte": {
+      "latitude": 34.4174135,
+      "longitude": -119.8553707
+    },
+    "Counseling and Career Services Building": {
+      "latitude": 34.41336,
+      "longitude": -119.849241
+    },
+    "San Nicholas Residence Hall": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Intercollegiate Athletics Building": {
+      "latitude": 34.415844,
+      "longitude": -119.850282
+    },
+    "Central Receiving Storehouse": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Parking Lot 05": {
+      "latitude": null,
+      "longitude": null
+    },
+    "6600 Block Del Playa Drive": {
+      "latitude": 34.409759,
+      "longitude": -119.858733
+    },
+    "Isla Vista": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Parking Lot 10": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Tropicana Del Norte": {
+      "latitude": 34.417038,
+      "longitude": -119.854823
+    },
+    "6500 Block Del Playa Drive": {
+      "latitude": 34.409274,
+      "longitude": -119.853746
+    },
+    "700 Block Embarcadero Del Mar": {
+      "latitude": 34.417283,
+      "longitude": -119.857046
+    },
+    "6641 Del Playa Drive": {
+      "latitude": 34.409543,
+      "longitude": -119.860239
+    },
+    "6693 Del Playa Drive": {
+      "latitude": 34.409553,
+      "longitude": -119.862312
+    },
+    "Campus Housing": {
+      "latitude": null,
+      "longitude": null
+    },
+    "6793 Estero Road": {
+      "latitude": 34.41333,
+      "longitude": -119.866018
+    },
+    "6730 Del Playa Drive": {
+      "latitude": 34.40986591304348,
+      "longitude": -119.86362339130434
+    },
+    "Madrid Road/ Embarcadero Del Mar": {
+      "latitude": 34.4124664,
+      "longitude": -119.8570485
+    },
+    "Boy's & Girl's Club (Devereux)": {
+      "latitude": null,
+      "longitude": null
+    },
+    "6672 Abrego Road": {
+      "latitude": 34.414338,
+      "longitude": -119.861636
+    },
+    "Coal Oil Point Reserve": {
+      "latitude": 34.41137,
+      "longitude": -119.876634
+    },
+    "West Campus Lane": {
+      "latitude": 34.416752,
+      "longitude": -119.86999
+    },
+    "6531 Del Playa Drive": {
+      "latitude": 34.408961,
+      "longitude": -119.855251
+    },
+    "Del Playa Drive/ Camino Del Sur": {
+      "latitude": 34.409779,
+      "longitude": -119.8625884
+    },
+    "Del Playa Drive/ El Embarcadero Road": {
+      "latitude": 34.4094089,
+      "longitude": -119.8562632
+    },
+    "Del Playa Drive/ Camino Pescadero Road": {
+      "latitude": 34.4142106,
+      "longitude": -119.858996
+    },
+    "Santa Ynez Apartments": {
+      "latitude": null,
+      "longitude": null
+    },
+    "6600 Block Abrego Road": {
+      "latitude": 34.414164,
+      "longitude": -119.858697
+    },
+    "El Embarcadero Road/ Del Playa Drive": {
+      "latitude": 34.4094089,
+      "longitude": -119.8562632
+    },
+    "6653 Del Playa Drive": {
+      "latitude": 34.409574,
+      "longitude": -119.861007
+    },
+    "Campus Property": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Campbell Hall": {
+      "latitude": 34.416288,
+      "longitude": -119.845534
+    },
+    "Harder Stadium": {
+      "latitude": 34.420667,
+      "longitude": -119.854614
+    },
+    "6565 Trigo Road": {
+      "latitude": 34.410924,
+      "longitude": -119.857742
+    },
+    "775 Camino Del Sur": {
+      "latitude": 34.415683,
+      "longitude": -119.863218
+    },
+    "Parking Lot 12": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Parking Lot 22": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Camino Pescadero Road/ Del Playa Drive": {
+      "latitude": 34.4142106,
+      "longitude": -119.858996
+    },
+    "Henry T. Yang Drive": {
+      "latitude": 34.423175,
+      "longitude": -119.862037
+    },
+    "Trailer near Ferguson Center (Devereux)": {
+      "latitude": null,
+      "longitude": null
+    },
+    "San Clemente Villages": {
+      "latitude": 34.417929,
+      "longitude": -119.858562
+    },
+    "Camino Del Sur/ Camino Pescadero Road": {
+      "latitude": 34.4151986,
+      "longitude": -119.8625613
+    },
+    "Outside of UCSB PD Jurisdiction": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Storke Road": {
+      "latitude": 34.4323392,
+      "longitude": -119.8699858
+    },
+    "Campus Point": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Camino Del Sur/ Del Playa Drive": {
+      "latitude": 34.409779,
+      "longitude": -119.8625884
+    },
+    "1000 Block Camino Pescadero Road": {
+      "latitude": 34.410621,
+      "longitude": -119.8587127
+    },
+    "6800 Block Del Playa Drive": {
+      "latitude": 34.410006,
+      "longitude": -119.866666
+    },
+    "6700 Block Trigo Road": {
+      "latitude": 34.411155,
+      "longitude": -119.862613
+    },
+    "900 Block Camino Lindo": {
+      "latitude": 34.4124076,
+      "longitude": -119.8679646
+    },
+    "San Nicolas Residence Hall": {
+      "latitude": 34.40959,
+      "longitude": -119.846008
+    },
+    "Chemistry Building": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Slough Road": {
+      "latitude": 34.417208,
+      "longitude": -119.869895
+    },
+    "6700 Block El Colegio Road": {
+      "latitude": 34.417339,
+      "longitude": -119.86472
+    },
+    "Harold Frank Hall": {
+      "latitude": 34.413842,
+      "longitude": -119.84196
+    },
+    "Los Carneros Road/ Discovery Drive": {
+      "latitude": 34.4253465,
+      "longitude": -119.8615418
+    },
+    "Manzanita Loop": {
+      "latitude": 34.4206919,
+      "longitude": -119.8580999
+    },
+    "6500 Block Seville Road": {
+      "latitude": 34.411795,
+      "longitude": -119.853673
+    },
+    "800 Block Camino Corto Road": {
+      "latitude": 34.4156868,
+      "longitude": -119.8665415
+    },
+    "6600 Block Sueno Road": {
+      "latitude": 34.412659,
+      "longitude": -119.858716
+    },
+    "1000 Block El Embarcadero Road": {
+      "latitude": 34.410221,
+      "longitude": -119.855959
+    },
+    "6500 Block Trigo Road": {
+      "latitude": 34.411138,
+      "longitude": -119.855553
+    },
+    "900 Block Embarcadero Del Norte": {
+      "latitude": 34.413128,
+      "longitude": -119.855396
+    },
+    "6827 Del Playa Drive": {
+      "latitude": 34.409524,
+      "longitude": -119.867415
+    },
+    "Ferguson Center": {
+      "latitude": 34.4108799,
+      "longitude": -119.8755575
+    },
+    "Tenaya South Tower": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Storke Plaza": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Santa Catalina": {
+      "latitude": 34.4183969,
+      "longitude": -119.8676659
+    },
+    "San Joaquin": {
+      "latitude": null,
+      "longitude": null
+    },
+    "El Colegio Road/ Camino Corto": {
+      "latitude": 34.4173369,
+      "longitude": -119.8665477
+    },
+    "Manzanita Villages": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Elings Hall": {
+      "latitude": 34.414929,
+      "longitude": -119.839665
+    },
+    "Biological Services II Building": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Music Building": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Buchanan Hall": {
+      "latitude": 34.4154761,
+      "longitude": -119.844593
+    },
+    "Multi Cultural Center": {
+      "latitude": null,
+      "longitude": null
+    },
+    "San Rafael Residence Hall": {
+      "latitude": 34.4109614,
+      "longitude": -119.8524488
+    },
+    "Santa Catalina Residence Hall": {
+      "latitude": 34.417828,
+      "longitude": -119.867999
+    },
+    "San Miguel Residence Hall": {
+      "latitude": 34.4103266,
+      "longitude": -119.8469615
+    },
+    "6600 Block Sabado Tarde Road": {
+      "latitude": 34.410435,
+      "longitude": -119.85872
+    },
+    "Webb Hall": {
+      "latitude": 34.413512,
+      "longitude": -119.843378
+    },
+    "North Campus Open Space": {
+      "latitude": 34.422401,
+      "longitude": -119.871409
+    },
+    "San Rafael Tower": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Associated Students Recycling Center": {
+      "latitude": 34.4143917,
+      "longitude": -119.8493493
+    },
+    "Bus Loop": {
+      "latitude": 34.4206919,
+      "longitude": -119.8580999
+    },
+    "900 Block Camino Corto Road": {
+      "latitude": 34.4126467,
+      "longitude": -119.8664232
+    },
+    "6650 Abrego Road": {
+      "latitude": 34.414684,
+      "longitude": -119.860692
+    },
+    "Parking Lot 57": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Interactive Learning Pavilion": {
+      "latitude": 34.4125194,
+      "longitude": -119.8453061
+    },
+    "Boys and Girls Club (Devereux)": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Embarcadero Del Norte/ Segovia Road": {
+      "latitude": 34.4144353,
+      "longitude": -119.8553797
+    },
+    "Brush North of Santa Ynez Apartments": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Camino Del Sur/ Abrego Road": {
+      "latitude": 34.4141751,
+      "longitude": -119.8625597
+    },
+    "Arbor": {
+      "latitude": null,
+      "longitude": null
+    },
+    "El Centro Building": {
+      "latitude": 34.414294,
+      "longitude": -119.8444325
+    },
+    "6775 Sueno Road": {
+      "latitude": 34.412436,
+      "longitude": -119.865358
+    },
+    "6613 Del Playa Drive": {
+      "latitude": 34.409334,
+      "longitude": -119.859319
+    },
+    "6574 Del Playa Drive": {
+      "latitude": 34.409875,
+      "longitude": -119.857889
+    },
+    "Embarcadero Del Mar/ Embarcadero Del Norte": {
+      "latitude": 34.4206919,
+      "longitude": -119.8580999
+    },
+    "6681 Del Playa Drive": {
+      "latitude": 34.409517,
+      "longitude": -119.861733
+    },
+    "Theater and Dance Building Restroom": {
+      "latitude": null,
+      "longitude": null
+    },
+    "De La Guerra Dining Commons": {
+      "latitude": 34.4178376,
+      "longitude": -119.8671871
+    },
+    "Embarcadero Hall": {
+      "latitude": 34.4121559,
+      "longitude": -119.8557764
+    },
+    "North of Parking Lot 38": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Arts Building": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Portola Dining Commons": {
+      "latitude": 34.4178376,
+      "longitude": -119.8671871
+    },
+    "6739 El Colegio Road": {
+      "latitude": 34.41677,
+      "longitude": -119.86425
+    },
+    "IV Theater": {
+      "latitude": 34.415,
+      "longitude": -119.848861
+    },
+    "San Joaquin Villages": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Westgate Apartments": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Student Organization": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Carrillo Dining Commons": {
+      "latitude": 34.4178376,
+      "longitude": -119.8671871
+    },
+    "6566 Del Playa Drive": {
+      "latitude": 34.409813,
+      "longitude": -119.857227
+    },
+    "Embarcadero Del Norte/ Trigo Road": {
+      "latitude": 34.4112044,
+      "longitude": -119.8555311
+    },
+    "6500 Block Sabado Tarde Road": {
+      "latitude": 34.410413,
+      "longitude": -119.853829
+    },
+    "6600 Block Trigo Road": {
+      "latitude": 34.411414,
+      "longitude": -119.858889
+    },
+    "Anisq'Oyo Park": {
+      "latitude": 34.412561,
+      "longitude": -119.856175
+    },
+    "Sabado Tarde Road/ Camino Majorca": {
+      "latitude": 34.4106209,
+      "longitude": -119.8695409
+    },
+    "West Campus Family Housing": {
+      "latitude": 34.418082,
+      "longitude": -119.872698
+    },
+    "Zaca House Manzanita": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Arrowhead Village San Clemente": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Santa Ynez": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Webb Hall Loading Dock": {
+      "latitude": 34.413512,
+      "longitude": -119.843378
+    },
+    "Anacapa Residence Hall": {
+      "latitude": 34.4110259,
+      "longitude": -119.8430499
+    },
+    "Santa Catalina South Tower": {
+      "latitude": 34.417814,
+      "longitude": -119.868291
+    },
+    "Parking Lot 65": {
+      "latitude": null,
+      "longitude": null
+    },
+    "Bren Hall": {
+      "latitude": 34.413203,
+      "longitude": -119.841855
+    },
+    "UCEN Road/ Life Sciences Building": {
+      "latitude": null,
+      "longitude": null
+    }
   }
-}

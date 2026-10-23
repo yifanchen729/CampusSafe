@@ -219,6 +219,7 @@ export default function Chart({
                 left: 0,
                 bottom: 0
               }}
+              barSize={45}
             >
               {/* Horizontal grid lines */}
               <CartesianGrid

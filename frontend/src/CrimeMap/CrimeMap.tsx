@@ -56,7 +56,7 @@ function CrimeMap({ filters }: CrimeMapProp) {
         minZoom={10}
         maxZoom={18}
         style={{
-          height: "100vh",
+          height: "80vh",
           width: "100%"
         }}
       >
