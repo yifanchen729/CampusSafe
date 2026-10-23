@@ -49,8 +49,6 @@ CampusSafe is an interactive web application for exploring reported crime incide
 
 ## Architecture
 
-## Architecture
-
 ```text
                     Public Incident Data
                             │
