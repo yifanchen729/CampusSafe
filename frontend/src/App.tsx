@@ -17,7 +17,8 @@ export default function App() {
   useEffect(() => {
     async function getCrimes() {
       try {
-        const response = await fetch("http://localhost:5000/api/crimes");
+        // const response = await fetch("http://localhost:5000/api/crimes");
+        const response = await fetch("https://site--campussafe--99l47djp6wk8.code.run/api/crimes");
         console.log("successfully interacted with API")
 
         const data = await response.json();

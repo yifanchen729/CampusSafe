@@ -129,7 +129,8 @@ export default function Table({
     async function getUpdatedTime() {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/updateTime"
+          // "http://localhost:5000/api/updateTime"
+          "https://site--campussafe--99l47djp6wk8.code.run/api/updateTime"
         );
 
         const data = await response.json();
