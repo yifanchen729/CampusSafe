@@ -1,12 +1,12 @@
 const axios = require("axios");
 const { parse } = require("csv-parse/sync");
-const fs = require("fs");
-const path = require("path");
 
 require("dotenv").config();
 
-// Take a string as crimeType then match keywords
-// to categories by outputing a category string
+const crimeData = require("./models/crimeData");
+const locationCache = require("./models/locationCache");
+
+// Map keywords into categories
 function categorizeCrime(crimeType) {
   const crime = crimeType.toLowerCase();
 
@@ -94,18 +94,12 @@ function normalizeCrime(row) {
   };
 }
 
-// Declare here for geocode function so don't have to call it again
-const cachePath = path.join(__dirname, "data", "locationCache.json");
-
-// Read the actual cache array
-const locationCache = JSON.parse(
-  fs.readFileSync(cachePath, "utf8")
-);
-
 // The function that uses Geoapify to get the lat and long
 // Uses cache in a file to prevent repetitively calling API
 // Since the limit is 5 API calls/s, for safety, I only did 4 API calls/s
-async function geocode(location) {
+async function geocode(location, cache) {
+
+  console.log("geocoding...");
 
   location = location
     .replace(/ Bike Racks$/i, "")
@@ -114,9 +108,9 @@ async function geocode(location) {
     .trim();
 
   // If cache
-  if (locationCache[location]) {
-    // console.log("location in cache")
-    return locationCache[location];
+  // Check our temporary in-memory cache first
+  if (cache[location]) {
+    return cache[location];
   }
 
   // Query and API calling
@@ -152,18 +146,19 @@ async function geocode(location) {
       };
 
   // For checking
-  
+
   console.log("Below is adding new location lat and long to cache");
   console.log(JSON.stringify(coordinates, null, 2));
 
   // Add to cache array
-  locationCache[location] = coordinates;
+  cache[location] = coordinates;
 
-  // Save the entire array to file every single time
-  fs.writeFileSync(
-    cachePath,
-    JSON.stringify(locationCache, null, 2)
-  );
+  // Also permanently save it in MongoDB
+  await locationCache.create({
+    location,
+    latitude: coordinates.latitude,
+    longitude: coordinates.longitude
+  });
 
   // Wait for .25s
   await new Promise(resolve => setTimeout(resolve, 250));
@@ -175,9 +170,26 @@ async function geocode(location) {
 // then convert into normalized data into a file
 async function getCrimeData() {
 
+  const cachedLocations =
+    await locationCache.find({});
+
+  // Create a cache for every single update
+  // LocationCache was stored an object of 3 values so have to reformat to access like object[key]
+  const cache = {};
+
+  for (const item of cachedLocations) {
+    cache[item.location] = {
+      latitude: item.latitude,
+      longitude: item.longitude
+    };
+  }
+
+  console.log(
+    `Loaded ${cachedLocations.length} cached locations`
+  );
+
   const url =
     "https://docs.google.com/spreadsheets/d/1ogmWCkY532nrMmhXJ1_noyisct1NslHiIg9qvJXUPlY/export?format=csv&gid=1931872013";
-
 
   // Get the sheet as csv
   const { data: csv } = await axios.get(url);
@@ -227,53 +239,18 @@ async function getCrimeData() {
   // For every row after normalized data, use Geoapify to convert
   // string locaiton into lat and long for mapping
   for (const row of result) {
-    const coordinates = await geocode(row.location);
+    const coordinates = await geocode(row.location, cache);
 
     row.latitude = coordinates.latitude;
     row.longitude = coordinates.longitude;
   }
 
-  // Get the absolute path then save it in ./data/crimeData.json
-  const filePath = path.join(__dirname, "data", "crimeData.json");
+  await crimeData.deleteMany({});
+  await crimeData.insertMany(result);
 
-  // Create/overwrite the file
-  fs.writeFileSync(
-    filePath,
-    JSON.stringify(result, null, 2)
+  console.log(
+    `Saved ${result.length} crimes to MongoDB`
   );
 }
 
 module.exports = getCrimeData;
-
-// Below is for testing only
-//
-//
-//
-//
-
-// async function test() {
-//   // const coordinates = await geocode("Davidson Library");
-//   // await geocode("Davidson Library"); // API request
-//   // await geocode("Davidson Library"); // uses cache
-//   // await geocode("Davidson Library"); // uses cache
-
-//   // Query and API calling
-//   const query = `700 Block Camino Del Sur6693 Del Playa Drive, UCSB, Goleta, California, USA`;
-
-//   const { data } = await axios.get(
-//     "https://api.geoapify.com/v1/geocode/search",
-//     {
-//       params: {
-//         text: query,
-//         limit: 1,
-//         apiKey: process.env.GEOAPIFY_API_KEY
-//       }
-//     }
-//   );
-
-//   const result = data.features[0];
-
-//   console.log(JSON.stringify(result.properties, null, 2));
-// }
-
-// test();

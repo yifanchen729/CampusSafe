@@ -1,29 +1,24 @@
 const express = require("express");
+const app = express();
+
+// For local port testing
 const cors = require("cors");
-const fs = require("fs");
-const path = require("path");
+
+const mongoose = require("mongoose");
+require("dotenv").config();
 
 const getCrimeData = require("./getCrimeData");
 
-const app = express();
-
-require("dotenv").config();
+const crimeData = require('./models/crimeData');
+const updateTime = require('./models/updateTime');
 
 app.use(express.json());
 app.use(cors());
 
-// Get crime data
-app.get("/api/crimes", (req, res) => {
+// This simply gets the crimeData and return it
+app.get("/api/crimes", async (req, res) => {
   try {
-    const filePath = path.join(
-      __dirname,
-      "data",
-      "crimeData.json"
-    );
-
-    const crimes = JSON.parse(
-      fs.readFileSync(filePath, "utf8")
-    );
+    const crimes = await crimeData.find({});
 
     res.status(200).json({ crimes });
 
@@ -36,18 +31,10 @@ app.get("/api/crimes", (req, res) => {
   }
 });
 
-// Get last update time
-app.get("/api/updateTime", (req, res) => {
+// This simply gets the updateTime and return it
+app.get("/api/updateTime", async (req, res) => {
   try {
-    const timePath = path.join(
-      __dirname,
-      "data",
-      "updateTime.json"
-    );
-
-    const data = JSON.parse(
-      fs.readFileSync(timePath, "utf8")
-    );
+    const data = await updateTime.findOne({});
 
     res.status(200).json({
       updatedAt: data.updatedAt
@@ -62,16 +49,15 @@ app.get("/api/updateTime", (req, res) => {
   }
 });
 
-function shouldUpdate() {
-  const timePath = path.join(
-    __dirname,
-    "data",
-    "updateTime.json"
-  );
+// This uses the updateTime data to check if need to update
+// The update time gap is currently: 1 hour
+async function shouldUpdate() {
+  const data = await updateTime.findOne({});
 
-  const data = JSON.parse(
-    fs.readFileSync(timePath, "utf8")
-  );
+  // No update time yet means we need to update
+  if (!data) {
+    return true;
+  }
 
   const updatedAt = new Date(data.updatedAt);
   const now = new Date();
@@ -81,11 +67,10 @@ function shouldUpdate() {
   return now - updatedAt >= oneHour;
 }
 
+// This is the actual update function
 async function updateCrimeData() {
   try {
-
-    // Don't update if data is less than 1 hour old
-    if (!shouldUpdate()) {
+    if (!(await shouldUpdate())) {
       console.log("Crime data is already up to date");
       return;
     }
@@ -94,45 +79,42 @@ async function updateCrimeData() {
 
     await getCrimeData();
 
-    // Update the last updated time
-    const timePath = path.join(
-      __dirname,
-      "data",
-      "updateTime.json"
+    // Update the last update time
+    await updateTime.findOneAndUpdate(
+      {},
+      {
+        updatedAt: new Date().toISOString()
+      },
+      {
+        upsert: true
+      }
     );
 
-    fs.writeFileSync(
-      timePath,
-      JSON.stringify(
-        {
-          updatedAt: new Date().toISOString()
-        },
-        null,
-        2
-      )
-    );
-
-    console.log("Crime data updated");
+    // We'll change this part next
 
   } catch (error) {
     console.log("Failed to update crime data:", error);
   }
 }
 
-// Update immediately when server starts
-updateCrimeData();
-
-// Update every 1 hours
-setInterval(
-  updateCrimeData,
-  60 * 60 * 1000
-);
-
 // Sets up the server
-const port = 5000;
+const port = process.env.PORT || 5000;
 const start = async () => {
   try {
+    await mongoose.connect(process.env.MONGO_URI)
+    console.log("Connected to MongoDB");
+
     app.listen(port, console.log(`Server is listening on port ${port}...`))
+
+    // Update immediately when server starts
+    updateCrimeData();
+
+    // Update every 1 hours
+    setInterval(
+      updateCrimeData,
+      60 * 60 * 1000
+    );
+
   } catch (error) {
     console.log(error)
   }
