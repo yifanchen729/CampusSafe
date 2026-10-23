@@ -167,30 +167,10 @@ Some incidents may not contain precise location information. Incidents with unav
 
 CampusSafe should not be treated as an emergency alert system or a replacement for official public safety resources.
 
-## Environment Variables
+## Disclaimer
 
-The backend requires:
-
-```env
-GEOAPIFY_API_KEY=
-```
-
-Environment files containing API credentials are excluded from Git through `.gitignore`. Do not commit API keys or other credentials to the repository.
-
-## Future Improvements
-
-- Deploy the full-stack application
-- Improve mobile responsiveness
-- Add additional crime statistics and visualizations
-- Improve location normalization and geocoding accuracy
-- Add more historical trend analysis
+CampusSafe is an independent student project and is not affiliated with, endorsed by, or operated by UC Santa Barbara or any law enforcement agency. Incident information may be delayed, incomplete, or subject to change. Always refer to official sources for emergency and public safety information.
 
 ## Author
 
 **Yifan Chen**
-
-Computer Science student at UC Santa Barbara
-
-## Disclaimer
-
-CampusSafe is an independent student project and is not affiliated with, endorsed by, or operated by UC Santa Barbara or any law enforcement agency. Incident information may be delayed, incomplete, or subject to change. Always refer to official sources for emergency and public safety information.
